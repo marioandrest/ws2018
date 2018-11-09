@@ -18,7 +18,7 @@ npm install
 
 Script `npm run build` generates a build of the website at `./ws2018`
 
-There is a live demo of the build at [http://mariotinoco.com/dist](http://mariotinoco.com/ws2018)
+There is a live demo of the build at [http://mariotinoco.com/dist](http://mariotinoco.com/dist)
 
 *Bonus **responsive** feature can be seen by sizing window less than 800px (2 columns) and 600px wide (1 column).*
 
