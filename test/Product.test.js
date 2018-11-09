@@ -14,11 +14,11 @@ describe('src.model.Product', () => {
     });
 
     test('has correct number of images', () => {
-        expect(product.images.length).toEqual(4);
+        expect(product.images.length).toEqual(5);
     });
 
     test('has correct first image uri', () => {
-        expect(product.images[0].src).toEqual("https://www.westelm.com/weimgs/ab/images/wcm/products/201836/0011/flannel-tossed-lines-duvet-cover-shams-m.jpg");
+        expect(product.images[0].src).toEqual("https://www.westelm.com/weimgs/ab/images/wcm/products/201835/0031/flannel-tossed-lines-duvet-cover-shams-m.jpg");
     });
 
 });

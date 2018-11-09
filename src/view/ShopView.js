@@ -27,6 +27,9 @@ class ShopView extends WS.View {
         // Lightbox
         let lb = document.createElement('div');
         lb.setAttribute('id', 'lightbox');
+        lb.onclick = () => {
+            lb.style.display = 'none';
+        };
 
         let injectSite = document.createElement('div');
         injectSite.setAttribute('id', 'injectSite');

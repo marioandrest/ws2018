@@ -6,7 +6,9 @@ module.exports = (env, argv) => {
         entry: './src/App.js',
         output: {
             path: path.join(__dirname, "dist/"),
-            publicPath: 'http://localhost:8080/dist/'
+            publicPath: (argv.mode == 'development')
+                ? 'http://localhost:8080/dist/'
+                : 'http://mariotinoco.com/dist/'
         },
         mode: 'development',
         plugins: [new MiniCssExtractPlugin({filename: 'main.css'})],

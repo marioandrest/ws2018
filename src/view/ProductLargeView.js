@@ -39,6 +39,8 @@ class ProductLargeView extends WS.View {
         let injectSite = document.createElement('div');
         injectSite.setAttribute('id', 'injectSite');
 
+        injectSite.onclick = (ev) => { ev.stopPropagation(); };
+
         let currentImage = this.model.images[this.index];
         let image = new WS.ImageView(currentImage);
         let imageElement = image.getElement();
