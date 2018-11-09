@@ -19,7 +19,6 @@ document.body.onload = () => {
         let shopView = new WS.ShopView(shop);
 
         // Inject root view element into document
-        document.body.innerHTML = "";
         document.body.appendChild(shopView.getElement());
     };
     request.send();
