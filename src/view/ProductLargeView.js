@@ -26,13 +26,14 @@ class ProductLargeView extends WS.View {
         let carousel = this.carousel;
 
         this.hero.setAttribute('src', this.model.images[this.index].src);
-        let children = Array.from(carousel.children);
-        children.forEach((child, n) => {
+
+        for (let n = 0; n < carousel.children.length; n++) {
+            let child = carousel.children[n];
             if (n == this.index)
                 child.setAttribute('class', 'current');
             else
                 child.setAttribute('class', 'notCurrent');
-        });
+        }
     }
 
     getElement() {

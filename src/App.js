@@ -18,6 +18,10 @@ document.body.onload = () => {
         let shop = new WS.Shop(json);
         let shopView = new WS.ShopView(shop);
 
+        // Remove browser not supported error.
+        let err = document.getElementById("error");
+        document.body.removeChild(err);
+
         // Inject root view element into document
         document.body.appendChild(shopView.getElement());
     };

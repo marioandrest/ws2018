@@ -26,20 +26,20 @@ Manual UI testing can be done by launching a live-refresh web server.
 
 `npm run serve`.
 
-I audited UI functionality on `{Chrome 70, Firefox 63, Edge 42}`
+I audited UI functionality on `{Chrome 70, Firefox 63, Edge 42, IE 11}`
 
 ### Unit Testing
 
 Unit tests can be ran with `npm test`
 
 ```
- PASS  test/View.test.js
  PASS  test/Shop.test.js
  PASS  test/Product.test.js
  PASS  test/Image.test.js
- 
+ PASS  test/View.test.js
+
 Test Suites: 4 passed, 4 total
-Tests:       12 passed, 12 total
+Tests:       16 passed, 16 total
 ```
 
 ### Full NPM Usage

@@ -15,7 +15,7 @@ class ShopView extends WS.View {
             let prodView = new WS.ProductSmalLView(product);
             let prodItem = document.createElement('li');
             prodItem.appendChild(prodView.getElement());
-            prodList.append(prodItem);
+            prodList.appendChild(prodItem);
         });
         section.appendChild(prodList);
 

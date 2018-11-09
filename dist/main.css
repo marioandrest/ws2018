@@ -33,7 +33,7 @@ ul.shop {
   ul.shop li {
     display: inline-block;
     margin: 10px 0 0 10px; }
-  ul.shop .product > a > img {
+  ul.shop .product > img {
     width: 240px; }
   ul.shop .product {
     position: relative;
@@ -153,6 +153,6 @@ h2 {
     width: 350px;
     margin: auto; }
   h2 {
-    width: 350px;
-    margin-left: 0px; } }
+    width: 240px;
+    margin-left: 55px; } }
 
