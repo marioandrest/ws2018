@@ -2,7 +2,7 @@
 
 submited by **Mario Tinoco** in **Nov 2018** 
 
-All code was writeen in vanilla javacript and sass. Build and other development scripts use [Webpack](https://webpack.js.org/), testing framework is [Jest](https://jestjs.io/).
+All code was written in vanilla javacript and sass. Build and other development scripts use [Webpack](https://webpack.js.org/), testing framework is [Jest](https://jestjs.io/).
 
 ### Installation
 
@@ -16,7 +16,9 @@ npm install
 
 Script `npm run build` generates a build of the website at `./ws2018`
 
-There is a live demo of the build at [http://mariotinoco.com/ws2018](http://mariotinoco.com/ws2018)
+There is a live demo of the build at [http://mariotinoco.com/dist](http://mariotinoco.com/ws2018)
+
+*Bonus **responsive** feature can be seen by sizing window less than 800px (2 columns) and 600px wide (1 column).*
 
 ### Manual UI Testing
 

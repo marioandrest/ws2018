@@ -5,7 +5,7 @@ describe('src.model.Shop', () => {
     const data = require('./data');
     let shop = new WS.Shop(data);
 
-    test('model has name from json', () => {
+    test('shop has name from json', () => {
         expect(shop.name).toBe('All New');
     });
 
@@ -15,6 +15,11 @@ describe('src.model.Shop', () => {
 
     test('first product\'s name', ()=> {
         expect(shop.products[0].name).toBe('Flannel Tossed Lines Duvet Cover + Shams');
+    });
+
+    test('ShopView can generate view element', ()=> {
+        let view = new WS.ShopView(shop);
+        expect(view.getElement().tagName).toEqual('DIV');
     });
 
 });

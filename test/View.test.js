@@ -16,4 +16,15 @@ describe('src.view.View', () => {
         }).toThrow('Abstract method invoked.');
     });
 
+    test('extend abstract class', () => {
+        class GoodView extends WS.View {
+            getElement() {
+                return document.createElement('div');
+            }
+        };
+
+        let goodView = new GoodView();
+        expect(goodView.getElement().tagName).toEqual('DIV');
+    });
+
 });

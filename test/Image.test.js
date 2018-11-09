@@ -1,6 +1,6 @@
 const WS = require('../src/WS');
 
-describe('src.view.ImageView', () => {
+describe('Image & ImageView', () => {
 
     test('basic image', () => {
         let img = new WS.ImageView(new WS.Image({}));

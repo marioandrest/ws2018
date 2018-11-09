@@ -36,23 +36,28 @@ class ProductLargeView extends WS.View {
     }
 
     getElement() {
-        let injectSite = document.createElement('div');
-        injectSite.setAttribute('id', 'injectSite');
+        let container = document.createElement('div');
+        container.setAttribute('id', 'largeProduct');
+        container.onclick = (ev) => { ev.stopPropagation(); };
 
-        injectSite.onclick = (ev) => { ev.stopPropagation(); };
+        // Title
+        let title = document.createElement('h3');
+        title.innerText = this.model.name;
+        container.appendChild(title);
 
+        // Hero
         let currentImage = this.model.images[this.index];
         let image = new WS.ImageView(currentImage);
         let imageElement = image.getElement();
         imageElement.setAttribute('id', 'hero');
         this.hero = imageElement;
-        injectSite.appendChild(imageElement);
+        container.appendChild(imageElement);
 
         // Exit Link
         let buttonExit = document.createElement('a');
         buttonExit.setAttribute('id', 'buttonExit');
         buttonExit.innerHTML = '&times';
-        injectSite.appendChild(buttonExit);
+        container.appendChild(buttonExit);
         buttonExit.onclick = () => {
             document.getElementById('lightbox').style.display = 'none';
         };
@@ -61,7 +66,7 @@ class ProductLargeView extends WS.View {
         let buttonPrev = document.createElement('a');
         buttonPrev.setAttribute('id', 'buttonPrev');
         buttonPrev.innerHTML = '<img src="./assets/prev.png" />';
-        injectSite.appendChild(buttonPrev);
+        container.appendChild(buttonPrev);
         buttonPrev.onclick = () => {
             this.prevImage();
         };
@@ -70,7 +75,7 @@ class ProductLargeView extends WS.View {
         let buttonNext = document.createElement('a');
         buttonNext.setAttribute('id', 'buttonNext');
         buttonNext.innerHTML = '<img src="./assets/next.png" />';
-        injectSite.appendChild(buttonNext);
+        container.appendChild(buttonNext);
         buttonNext.onclick = () => {
             this.nextImage();
         };
@@ -87,11 +92,11 @@ class ProductLargeView extends WS.View {
             };
             carousel.appendChild(thumbElem);
         });
-        injectSite.appendChild(carousel);
+        container.appendChild(carousel);
 
         this.updateView();
 
-        return injectSite;
+        return container;
     }
 }
 

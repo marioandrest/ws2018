@@ -3,6 +3,10 @@
   position: relative;
   width: 100%;
 
+  img#hero{
+    display: block;
+  }
+
   #lightbox {
     position: fixed;
     top: 0;
@@ -12,12 +16,14 @@
     background: rgba(black, 0.90);
     text-align: center;
 
-    #injectSite {
+    #largeProduct {
       position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       background: rgba(white, 1.0);
+
+      padding: 1em;
     }
 
     #buttonExit {
@@ -44,7 +50,7 @@
 
   vertical-align: center;
 
-  img{
+  img {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
@@ -52,29 +58,20 @@
   }
 }
 
-a#buttonNext {
+a#buttonNext, a#buttonNext img {
   right: 0;
-
-  img {
-    right: 0;
-  }
 }
 
-a#buttonPrev {
+a#buttonPrev, a#buttonPrev img {
   left: 0;
-
-  img {
-    left: 0;
-  }
 }
-
 
 #carousel {
   text-align: center;
+  padding-top: 10px;
 
   img {
-    border: 1px solid white;
-    margin: 2px;
+    margin: 2px 2px 0 2px;
     display: inline-block;
     width: 30px;
     opacity: 0.33;

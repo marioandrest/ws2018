@@ -1,7 +1,7 @@
 const WS = require('../src/WS');
 const data = require('./data');
 
-describe('src.model.Product', () => {
+describe('Product', () => {
 
     let product = new WS.Product(data.groups[0]);
 
@@ -19,6 +19,16 @@ describe('src.model.Product', () => {
 
     test('has correct first image uri', () => {
         expect(product.images[0].src).toEqual("https://www.westelm.com/weimgs/ab/images/wcm/products/201835/0031/flannel-tossed-lines-duvet-cover-shams-m.jpg");
+    });
+
+    test('ProductSmalLView can generate view element', () => {
+        let view = new WS.ProductSmalLView(product);
+        expect(view.getElement().tagName).toEqual('DIV');
+    });
+
+    test('ProductLargeView can generate view element', () => {
+        let view = new WS.ProductLargeView(product);
+        expect(view.getElement().tagName).toEqual('DIV');
     });
 
 });
