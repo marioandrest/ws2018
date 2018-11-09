@@ -4,13 +4,14 @@ const path = require('path');
 module.exports = (env, argv) => {
     return {
         entry: './src/App.js',
+
         output: {
             path: path.join(__dirname, "dist/"),
             publicPath: (argv.mode == 'development')
                 ? 'http://localhost:8080/dist/'
                 : 'http://mariotinoco.com/dist/'
         },
-        mode: 'development',
+
         plugins: [new MiniCssExtractPlugin({filename: 'main.css'})],
         module: {
             rules: [
@@ -22,11 +23,9 @@ module.exports = (env, argv) => {
                         options: {presets: ['@babel/preset-env']}
                     }
                 }, {
-                    test: /\.(sa|sc|c)ss$/,
+                    test: /\.scss$/,
                     use: [
-                        (argv.mode == 'development')
-                            ? 'style-loader'
-                            : MiniCssExtractPlugin.loader,
+                        (argv.mode == 'development') ? 'style-loader' : MiniCssExtractPlugin.loader,
                         'css-loader',
                         'sass-loader'
                     ]
