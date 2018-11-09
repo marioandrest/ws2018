@@ -19,6 +19,9 @@ h1, h2, h3 {
   padding: 6px 0;
   font-weight: normal; }
 
+#error {
+  color: #CCC; }
+
 h2 {
   background-color: rgba(210, 10, 22, 0.8);
   color: white; }
