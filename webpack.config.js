@@ -1,13 +1,14 @@
-const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
 
 module.exports = (env, argv) => {
     return {
         entry: './src/App.js',
         output: {
-            path: path.resolve(__dirname, 'ws2018/'),
-            filename: 'main.js'
+            path: path.join(__dirname, "build/"),
+            publicPath: 'http://localhost:8080/dist/'
         },
+        mode: 'development',
         plugins: [new MiniCssExtractPlugin({filename: 'assets/main.css'})],
         module: {
             rules: [

@@ -6,10 +6,10 @@ class ShopView extends WS.View {
         //
         // Basic page Elements
         let header = document.createElement('header');
-        header.innerHTML = `<h1><img src="/ws2018/assets/logo.svg" /></h1><h2>${this.model.name}</h2>`;
+        header.innerHTML = `<h1><img src="/dist/assets/logo.svg" /></h1><h2>${this.model.name}</h2>`;
         let section = document.createElement('section');
         let footer = document.createElement('footer');
-        footer.innerHTML = '<footer>&copy; 2018 Williams-Sonoma Inc., All Rights Reserved</footer>';
+        footer.innerHTML = '<footer>&copy; 2016 Williams-Sonoma Inc., All Rights Reserved</footer>';
 
         //
         // Compose list of Products

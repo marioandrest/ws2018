@@ -12,7 +12,7 @@ import './sass/App.scss'
 document.body.onload = () => {
 
     var request = new XMLHttpRequest();
-    request.open('GET', '/ws2018/catalog/all-new.json', true);
+    request.open('GET', '/dist/catalog/all-new.json', true);
 
     request.onload = () => {
         let json = JSON.parse(request.responseText);

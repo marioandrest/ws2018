@@ -5,7 +5,9 @@
 
 $fontFamily: "GT-Eesti", Arial;
 $colorRegular: #565458;
+
+$colorsSale: #333;
 $colorsSale: #AE1A31;
 
-@import 'Layout';
-@import 'Type';
+@import './Layout';
+@import './Type';
