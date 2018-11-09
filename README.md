@@ -2,7 +2,9 @@
 
 submited by **Mario Tinoco** in **Nov 2018** 
 
-All code was written in vanilla javacript and sass. Build and other development scripts use [Webpack](https://webpack.js.org/), testing framework is [Jest](https://jestjs.io/).
+All code was written in vanilla javacript and sass.  
+Build and other development scripts use [Webpack](https://webpack.js.org/)  
+Testing framework is [Jest](https://jestjs.io/)
 
 ### Installation
 
@@ -53,14 +55,15 @@ Tests:       16 passed, 16 total
 
 ### Directory Structure
 
-`$tree -I 'node_modules' -d`
-
 ```
 .
-├── ws2018          // build output for production
+├── dist            // build output for production
+│   ├── assets      // images, compiled css, font
+│   ├── catalog     // challenge JSON
 ├── src             
 │   ├── model       // json consumers
 │   ├── sass
-│   └── view        // javascript code for view layer
+│   ├── view        // javascript code for view layer
+│   └── App.js      // entry-point        
 └── test            // all unit tests and a cached data.json 
 ```
