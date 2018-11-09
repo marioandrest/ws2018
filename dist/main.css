@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "GT-Eesti";
+  src: url("/dist/assets/GT-Eesti.woff") format("woff"); }
+
+body {
+  padding: 0;
+  margin: 0; }
+
+body > div {
+  margin: 0 auto; }
+
+footer {
+  padding: 14px 0; }
+
+.product {
+  position: relative;
+  overflow: hidden; }
+  .product img {
+    width: 240px; }
+  .product p.title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220px;
+    padding: 5px 10px; }
+  .product .priceBar {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    display: inline-block; }
+    .product .priceBar p {
+      padding: 5px; }
+
+section {
+  text-align: center; }
+  section .shop {
+    display: inline-block;
+    padding: 0 10px 0 0; }
+    section .shop li {
+      display: inline-block;
+      margin: 10px 0 0 10px; }
+
+#container {
+  position: relative;
+  width: 100%; }
+  #container #lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center; }
+    #container #lightbox #injectSite {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white; }
+    #container #lightbox #buttonExit {
+      cursor: pointer;
+      font-family: Verdana;
+      font-size: 36px;
+      font-weight: bold;
+      position: absolute;
+      right: -6px;
+      top: -48px;
+      color: #FFFFFF; }
+
+a.buttonNext {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  height: 100%; }
+
+.carousel {
+  text-align: center; }
+  .carousel img {
+    border: 1px solid white;
+    margin: 2px;
+    display: inline-block;
+    width: 30px;
+    opacity: 0.33; }
+  .carousel img.current {
+    opacity: 1; }
+
+body {
+  color: #565458;
+  font-family: "GT-Eesti", Arial; }
+
+header, footer {
+  text-align: center; }
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  padding: 0;
+  margin: 0; }
+
+h1, h2 {
+  margin: 12px 0; }
+
+h2 {
+  padding: 6px 0;
+  font-weight: normal;
+  background-color: rgba(174, 26, 49, 0.8);
+  color: white; }
+
+ul.shop {
+  list-style: none; }
+
+.product {
+  text-align: left; }
+  .product .title {
+    background: rgba(255, 255, 255, 0.75);
+    font-size: 16px; }
+  .product img {
+    display: block;
+    transition: transform 0.25s ease-out; }
+  .product .priceBar {
+    font-size: 14px;
+    font-family: Arial; }
+    .product .priceBar .regular {
+      font-size: 0.9em;
+      text-decoration: line-through;
+      background-color: rgba(0, 0, 0, 0.66);
+      color: white; }
+    .product .priceBar .selling {
+      font-size: 0.9em;
+      background-color: rgba(174, 26, 49, 0.66);
+      color: white; }
+
+header, section, footer {
+  width: 800px;
+  margin: auto; }
+
+h2 {
+  width: 740px;
+  margin-left: 30px; }
+
+@media (max-width: 500px) {
+  header, section, footer {
+    width: 350px;
+    margin: auto; }
+  h2 {
+    width: 350px;
+    margin-left: 0px; } }
+

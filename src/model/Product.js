@@ -6,11 +6,13 @@ class Product {
         this.name = json.name;
         this.priceRange = json.priceRange;
 
-        this.thumbnail = new WS.Image(json.thumbnail);
+        this.images = new Array();
 
-        this.images = json.images.map(image => {
-            return new WS.Image(image);
+        this.images.push(new WS.Image(json.hero));
+        json.images.map(image => {
+            this.images.push(new WS.Image(image));
         });
+
     }
 };
 

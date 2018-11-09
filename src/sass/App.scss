@@ -1,13 +1,13 @@
 @font-face {
   font-family: "GT-Eesti";
-  src: url("/ws2018/assets/GT-Eesti.woff") format('woff');
+  src: url("/dist/assets/GT-Eesti.woff") format('woff');
 }
 
 $fontFamily: "GT-Eesti", Arial;
 $colorRegular: #565458;
-
-$colorsSale: #333;
+$colorsSale: #333333;
 $colorsSale: #AE1A31;
 
 @import './Layout';
 @import './Type';
+@import './Reactive';

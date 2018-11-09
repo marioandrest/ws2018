@@ -13,9 +13,15 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   margin: 0;
 }
 
+h1, h2 {
+  margin: 12px 0;
+}
+
 h2 {
-  color: $colorsSale;
+  padding: 6px 0;
   font-weight: normal;
+  background-color: rgba($colorsSale, 0.8);
+  color: white;
 }
 
 ul.shop {

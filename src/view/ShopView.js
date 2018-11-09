@@ -27,22 +27,12 @@ class ShopView extends WS.View {
         // Lightbox
         let lb = document.createElement('div');
         lb.setAttribute('id', 'lightbox');
-        let lbExit = document.createElement('a');
-        lbExit.innerHTML = '&times';
-        let lbInner = document.createElement('div');
-        let lbHero = document.createElement('img');
-        lbHero.setAttribute('id', 'lbHero');
-        lbHero.setAttribute('src', '/ws2018/assets/logo.svg');
-        lbInner.appendChild(lbHero);
-        lbInner.appendChild(lbExit);
-        lb.appendChild(lbInner);
-        lb.style.display = 'none';
 
-        //
-        // Exit Event Handler for Lightbox
-        lbExit.onclick = () => {
-            lb.style.display = 'none';
-        };
+        let injectSite = document.createElement('div');
+        injectSite.setAttribute('id', 'injectSite');
+
+        lb.appendChild(injectSite);
+        lb.style.display = 'none';
 
         //
         // Shop Composition

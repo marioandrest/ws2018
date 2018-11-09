@@ -5,11 +5,11 @@ module.exports = (env, argv) => {
     return {
         entry: './src/App.js',
         output: {
-            path: path.join(__dirname, "build/"),
+            path: path.join(__dirname, "dist/"),
             publicPath: 'http://localhost:8080/dist/'
         },
         mode: 'development',
-        plugins: [new MiniCssExtractPlugin({filename: 'assets/main.css'})],
+        plugins: [new MiniCssExtractPlugin({filename: 'main.css'})],
         module: {
             rules: [
                 {

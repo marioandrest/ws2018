@@ -8,14 +8,17 @@ class ProductSmallView extends WS.View {
     }
 
     getElement() {
-        let imageView = new WS.ImageView(this.model.thumbnail);
+        let imageView = new WS.ImageView(this.model.images[0]);
         let imageElement = imageView.getElement();
         let imageLink = document.createElement('a');
         imageLink.setAttribute('href', '#');
         imageLink.appendChild(imageElement);
 
         imageElement.onclick = () => {
-            document.getElementById('lbHero').setAttribute('src', this.model.thumbnail.src);
+            let largeView = new WS.ProductLargeView(this.model);
+
+            let oldChild = document.getElementById('injectSite');
+            document.getElementById('lightbox').replaceChild(largeView.getElement(), oldChild);
             document.getElementById('lightbox').style.display = 'block';
         };
 
